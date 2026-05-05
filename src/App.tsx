@@ -10,6 +10,10 @@ import { Slide04TheoryTree } from '@/components/slides/Slide04TheoryTree'
 import { Slide05Realism } from '@/components/slides/Slide05Realism'
 import { Slide06Hegemony } from '@/components/slides/Slide06Hegemony'
 import { Slide07Astropolitik } from '@/components/slides/Slide07Astropolitik'
+import { Slide08CoreClaim } from '@/components/slides/Slide08CoreClaim'
+import { Slide09Arg1Anarchy } from '@/components/slides/Slide09Arg1Anarchy'
+import { Slide10Arg2PublicGoods } from '@/components/slides/Slide10Arg2PublicGoods'
+import { Slide11Arg3Mirror } from '@/components/slides/Slide11Arg3Mirror'
 
 export default function App() {
   useKeyboardNav()
@@ -25,7 +29,11 @@ export default function App() {
         <Slide05Realism />
         <Slide06Hegemony />
         <Slide07Astropolitik />
-        {SLIDES.slice(8).map((s) => (
+        <Slide08CoreClaim />
+        <Slide09Arg1Anarchy />
+        <Slide10Arg2PublicGoods />
+        <Slide11Arg3Mirror />
+        {SLIDES.slice(12).map((s) => (
           <div key={s.id} className="relative z-10 font-serif text-4xl text-text">
             {s.displayNumber !== null && (
               <span className="font-mono text-sm text-accent mr-4">
