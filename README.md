@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# 신우주경쟁 발표 슬라이드 웹앱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1-1 삼위일체팀 · 현실주의 관점 · 2026.05
 
-Currently, two official plugins are available:
+19-패널 발표 슬라이드 웹앱. 항시 작동 앰비언트 레이어 + 패널별 커스텀 비주얼 + 발표자 도구.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Run locally
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+http://localhost:5173 에서 확인.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run preview
 ```
+
+## Tests
+
+```bash
+npm run test:run
+```
+
+## Keyboard shortcuts
+
+| Key | Action |
+|-----|--------|
+| ←/→/↑/↓/Space | 이전/다음 슬라이드 |
+| 0–6 | 챕터 점프 |
+| Home/End | 처음/마지막 |
+| F | 풀스크린 |
+| O / Esc | 오버뷰 모드 |
+| P | 프리젠터 노트 |
+| T | 타이머 |
+| A | 앰비언트 모션 토글 |
+| ? | 단축키 도움말 |
+
+## Tech stack
+
+Vite 8 · React 19 · TypeScript 6 · Tailwind CSS v4 · framer-motion 12 · zustand 5 · @react-three/fiber + drei
+
+## Deployment
+
+Vercel:
+```bash
+vercel --prod
+```
+
+또는 GitHub repo를 Vercel 대시보드에서 import.
+
+## Spec & Plan
+
+- Spec: `../docs/superpowers/specs/2026-05-05-presentation-site-design.md`
+- Plan: `../docs/superpowers/plans/2026-05-05-presentation-site.md`
