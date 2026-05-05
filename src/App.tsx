@@ -1,6 +1,9 @@
 import { PresentationShell } from '@/components/shell/PresentationShell'
 import { AmbientLayer } from '@/components/ambient/AmbientLayer'
 import { useKeyboardNav } from '@/hooks/useKeyboardNav'
+import { useMouseIdle } from '@/hooks/useMouseIdle'
+import { cn } from '@/lib/cn'
+import { PresenterHUD } from '@/components/presenter/PresenterHUD'
 import { Slide00Cover } from '@/components/slides/Slide00Cover'
 import { Slide01Contents } from '@/components/slides/Slide01Contents'
 import { Slide02Treaty } from '@/components/slides/Slide02Treaty'
@@ -23,8 +26,10 @@ import { Slide18References } from '@/components/slides/Slide18References'
 
 export default function App() {
   useKeyboardNav()
+  const idle = useMouseIdle()
+
   return (
-    <>
+    <div className={cn(idle && 'cursor-none')}>
       <AmbientLayer />
       <PresentationShell>
         <Slide00Cover />
@@ -47,6 +52,14 @@ export default function App() {
         <Slide17Conclusion />
         <Slide18References />
       </PresentationShell>
-    </>
+      <PresenterHUD />
+      <div className={cn(
+        'fixed bottom-4 left-4 z-30 font-mono text-[0.65rem] text-text-faint pointer-events-none transition-opacity',
+        idle ? 'opacity-0' : 'opacity-100'
+      )}
+      style={{ letterSpacing: '0.2em' }}>
+        ? FOR HELP
+      </div>
+    </div>
   )
 }
