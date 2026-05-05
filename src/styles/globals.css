@@ -78,3 +78,31 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+:root.theme-light {
+  --color-bg: #f5efe1;
+  --color-bg-2: #ece5d3;
+  --color-bg-3: #e0d8c2;
+  --color-text: #1a1a22;
+  --color-text-dim: #5b5750;
+  --color-text-faint: #8a857b;
+  --color-accent: #c14a26;
+  --color-accent-glow: rgba(193, 74, 38, 0.10);
+  --color-amber: #a87a1f;
+  --color-line: #d6cfba;
+  --color-line-strong: #b8af96;
+}
+
+:root.theme-light ::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+body {
+  transition: background-color 200ms var(--ease-cinematic),
+              color 200ms var(--ease-cinematic);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body { transition: none; }
+}
