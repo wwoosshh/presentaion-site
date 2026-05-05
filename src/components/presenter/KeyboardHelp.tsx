@@ -11,6 +11,7 @@ const SHORTCUTS = [
   { key: 'P',              desc: '프리젠터 노트' },
   { key: 'T',              desc: '타이머' },
   { key: 'A',              desc: '앰비언트 토글' },
+  { key: 'L',              desc: '라이트 / 다크 토글' },
   { key: '?',              desc: '이 도움말' },
 ]
 

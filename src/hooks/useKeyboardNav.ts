@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { usePresenterMode } from './usePresenterMode'
 import { useFullscreen } from './useFullscreen'
+import { useThemeStore } from '@/lib/themeStore'
 import { SLIDES } from '@/data/slides'
 
 function scrollToSlide(idx: number) {
@@ -75,6 +76,10 @@ export function useKeyboardNav() {
         case 'a':
           e.preventDefault()
           s.toggleAmbient()
+          break
+        case 'l':
+          e.preventDefault()
+          useThemeStore.getState().toggle()
           break
         case '?':
           e.preventDefault()
