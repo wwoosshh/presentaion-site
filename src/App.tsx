@@ -1,10 +1,19 @@
+import { PresentationShell } from '@/components/shell/PresentationShell'
+import { SLIDES } from '@/data/slides'
+
 export default function App() {
   return (
-    <div className="min-h-screen bg-bg text-text font-sans flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="font-serif text-5xl text-accent">신우주경쟁</h1>
-        <p className="mt-4 font-mono text-sm tracking-[0.2em] text-text-dim">디자인 토큰 검증</p>
-      </div>
-    </div>
+    <PresentationShell>
+      {SLIDES.map((s) => (
+        <div key={s.id} className="font-serif text-4xl text-text">
+          {s.displayNumber !== null && (
+            <span className="font-mono text-sm text-accent mr-4">
+              S.{String(s.displayNumber).padStart(2, '0')}
+            </span>
+          )}
+          {s.title}
+        </div>
+      ))}
+    </PresentationShell>
   )
 }
