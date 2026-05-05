@@ -3,7 +3,9 @@ import { SplitText } from '@/components/primitives/SplitText'
 import { Pill } from '@/components/primitives/Pill'
 import { motion } from 'framer-motion'
 import { reveal, revealStagger } from '@/lib/motion'
-import { HeroMoon } from '@/components/visuals/HeroMoon'
+import { lazy, Suspense } from 'react'
+
+const HeroMoon = lazy(() => import('@/components/visuals/HeroMoon').then(m => ({ default: m.HeroMoon })))
 
 export function Slide00Cover() {
   const c = CONTENT.cover
@@ -11,7 +13,9 @@ export function Slide00Cover() {
 
   return (
     <>
-      <HeroMoon />
+      <Suspense fallback={null}>
+        <HeroMoon />
+      </Suspense>
       <motion.div
         className="relative z-10 w-full max-w-[1200px]"
         variants={revealStagger(0.12)}
