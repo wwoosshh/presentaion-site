@@ -1,7 +1,9 @@
 import { PresentationShell } from '@/components/shell/PresentationShell'
 import { SLIDES } from '@/data/slides'
+import { useKeyboardNav } from '@/hooks/useKeyboardNav'
 
 export default function App() {
+  useKeyboardNav()
   return (
     <PresentationShell>
       {SLIDES.map((s) => (
