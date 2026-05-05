@@ -18,7 +18,7 @@ export function PresentationShell({ children }: Props) {
     <>
       <ProgressBar />
       <SideNav />
-      <div className={cn('snap-y snap-mandatory h-screen overflow-y-scroll relative bg-bg text-text')}>
+      <div className={cn('snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden relative bg-bg text-text')}>
         {children.map((child, i) => {
           const meta = SLIDES[i]
           return (
@@ -27,7 +27,7 @@ export function PresentationShell({ children }: Props) {
               id={`s${i}`}
               ref={setRef(i)}
               className={cn(
-                'snap-start snap-always relative',
+                'snap-start snap-always relative overflow-hidden',
                 'min-h-screen w-full',
                 'flex flex-col justify-center',
                 'px-[8vw] py-[5vh]',

@@ -16,8 +16,8 @@ export function OrbitRings() {
       viewBox="-500 -500 1000 1000"
       preserveAspectRatio="xMidYMid meet"
       className={cn(
-        'fixed inset-0 m-auto pointer-events-none z-[1]',
-        'w-screen h-screen transition-opacity duration-700',
+        'fixed inset-0 pointer-events-none z-[1]',
+        'w-full h-full transition-opacity duration-700',
         intense ? 'opacity-30' : 'opacity-[0.05]'
       )}
     >
