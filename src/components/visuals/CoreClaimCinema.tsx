@@ -8,7 +8,7 @@ export function CoreClaimCinema({ lines }: Props) {
       <motion.div
         aria-hidden
         className="absolute inset-0 -z-10 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(232,93,60,0.10), transparent 60%)' }}
+        style={{ background: 'radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 60%)' }}
         animate={{ opacity: [0.7, 1, 0.7] }}
         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
       />

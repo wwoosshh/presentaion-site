@@ -29,7 +29,7 @@ export function TheoryTree({ levels }: { levels: readonly Level[] }) {
             className="absolute right-6 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-accent"
             animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: i * 0.5 }}
-            style={{ boxShadow: '0 0 12px rgba(232,93,60,0.4)' }}
+            style={{ boxShadow: '0 0 12px color-mix(in srgb, var(--color-accent) 40%, transparent)' }}
           />
           <div className="font-mono text-[0.7rem] uppercase text-accent mb-2" style={{ letterSpacing: '0.3em' }}>{lv.label}</div>
           <div className="font-serif text-2xl font-bold text-text mb-1">{lv.name}</div>

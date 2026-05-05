@@ -14,7 +14,7 @@ export function ChapterCards({ cards }: { cards: readonly CardData[] }) {
         <motion.div
           key={i}
           className={cn('relative bg-bg-2 border border-line p-6 cursor-default will-change-transform')}
-          whileHover={{ rotateX: -2, rotateY: 3, y: -4, boxShadow: '0 20px 40px -20px rgba(232,93,60,0.15)' }}
+          whileHover={{ rotateX: -2, rotateY: 3, y: -4, boxShadow: '0 20px 40px -20px color-mix(in srgb, var(--color-accent) 15%, transparent)' }}
           style={{ transformStyle: 'preserve-3d' }}
           transition={hoverSpring}
         >
