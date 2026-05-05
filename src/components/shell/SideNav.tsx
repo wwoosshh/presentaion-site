@@ -8,7 +8,7 @@ export function SideNav() {
   const idle = useMouseIdle()
   return (
     <nav className={cn(
-      'fixed top-1/2 right-8 -translate-y-1/2 z-40 flex flex-col gap-2 transition-opacity duration-500',
+      'fixed top-1/2 right-8 -translate-y-1/2 z-40 hidden md:flex flex-col gap-2 transition-opacity duration-500',
       idle && 'opacity-0 pointer-events-none'
     )}>
       {SLIDES.map((s, i) => (

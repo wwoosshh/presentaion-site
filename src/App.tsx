@@ -54,7 +54,7 @@ export default function App() {
       </PresentationShell>
       <PresenterHUD />
       <div className={cn(
-        'fixed bottom-4 left-4 z-30 font-mono text-[0.65rem] text-text-faint pointer-events-none transition-opacity',
+        'hidden md:block fixed bottom-4 left-4 z-30 font-mono text-[0.65rem] text-text-faint pointer-events-none transition-opacity',
         idle ? 'opacity-0' : 'opacity-100'
       )}
       style={{ letterSpacing: '0.2em' }}>

@@ -12,7 +12,7 @@ export function Slide12Arg4Legitimacy() {
       <Kicker>{c.kicker}</Kicker>
       <h2 className="font-serif text-[clamp(1.5rem,3vw,2.4rem)] font-bold text-center mb-3">{c.title}</h2>
 
-      <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-6 my-3">
+      <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] items-center gap-3 sm:gap-6 md:gap-12 my-3 md:my-8">
         <div className="text-center">
           <div className="font-latin font-bold leading-none text-accent text-[clamp(4rem,8vw,7rem)]">
             <CountUp to={66} />

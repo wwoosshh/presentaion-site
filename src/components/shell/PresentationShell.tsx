@@ -27,10 +27,11 @@ export function PresentationShell({ children }: Props) {
               id={`s${i}`}
               ref={setRef(i)}
               className={cn(
-                'snap-start snap-always relative overflow-hidden',
-                'h-screen w-full',
+                'snap-start snap-always relative',
+                'min-h-screen md:h-screen w-full',
+                'overflow-y-auto md:overflow-hidden',
                 'flex flex-col justify-center',
-                'px-[8vw] pt-[10vh] pb-[10vh]',
+                'px-5 pt-20 pb-20 md:px-[8vw] md:pt-[10vh] md:pb-[10vh]',
                 'border-b border-line'
               )}
             >

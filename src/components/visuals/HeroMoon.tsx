@@ -16,9 +16,9 @@ export function HeroMoon() {
   return (
     <motion.div
       aria-hidden
-      className="absolute right-[-10vw] top-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] pointer-events-none"
+      className="absolute right-[-15vw] top-[15%] md:right-[-10vw] md:top-1/2 md:-translate-y-1/2 w-[80vw] h-[80vw] md:w-[60vw] md:h-[60vw] max-w-[700px] max-h-[700px] pointer-events-none opacity-50 md:opacity-90"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 0.9 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <Canvas camera={{ position: [0, 0, 4.5], fov: 45 }}>

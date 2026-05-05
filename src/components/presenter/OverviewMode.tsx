@@ -17,7 +17,7 @@ export function OverviewMode() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed inset-0 z-[100] bg-bg/95 backdrop-blur-md p-12 overflow-y-auto"
+          className="fixed inset-0 z-[100] bg-bg/95 backdrop-blur-md p-4 md:p-12 overflow-y-auto"
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
         >
@@ -26,7 +26,7 @@ export function OverviewMode() {
             <button onClick={close} className="font-mono text-xs text-text-dim hover:text-accent">[ESC] CLOSE</button>
           </header>
 
-          <div className="grid grid-cols-4 md:grid-cols-5 gap-4 max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4 max-w-[1400px] mx-auto">
             {SLIDES.map((s, i) => (
               <button
                 key={s.id}

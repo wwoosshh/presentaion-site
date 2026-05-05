@@ -12,7 +12,7 @@ export function PresenterNotes() {
     <AnimatePresence>
       {visible && (
         <motion.aside
-          className="fixed top-12 right-6 bottom-24 w-[360px] z-40 bg-bg-2/95 border border-line p-6 overflow-y-auto"
+          className="fixed top-12 right-2 left-2 bottom-24 md:right-6 md:left-auto md:w-[360px] z-40 bg-bg-2/95 border border-line p-6 overflow-y-auto"
           initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 30 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >

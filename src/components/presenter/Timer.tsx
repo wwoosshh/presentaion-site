@@ -41,7 +41,7 @@ export function Timer() {
 
   return (
     <motion.div
-      className="fixed bottom-6 right-6 z-50 bg-bg-2/90 backdrop-blur-sm border border-line p-4 font-mono text-xs select-none"
+      className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 bg-bg-2/90 backdrop-blur-sm border border-line p-3 md:p-4 font-mono text-[0.65rem] md:text-xs select-none"
       initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
     >
       <div className="flex items-center gap-3 mb-2">
@@ -50,7 +50,7 @@ export function Timer() {
         </button>
         <button onClick={() => { setTotalSec(0); setSlideSec(0) }} className="px-2 py-0.5 border border-line text-text-dim hover:border-accent hover:text-accent">RESET</button>
       </div>
-      <div className={cn('text-2xl', overBudget ? 'text-accent' : 'text-amber')}>
+      <div className={cn('text-xl md:text-2xl', overBudget ? 'text-accent' : 'text-amber')}>
         {fmt(slideSec)} <span className="text-text-faint text-sm">/ {fmt(budget)}</span>
       </div>
       <div className="text-text-dim text-[0.7rem] mt-1" style={{ letterSpacing: '0.2em' }}>TOTAL {fmt(totalSec)} / 15:00</div>
