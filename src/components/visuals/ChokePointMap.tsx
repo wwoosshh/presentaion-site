@@ -11,7 +11,7 @@ export function ChokePointMap() {
       </motion.g>
 
       <motion.g initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: false, amount: 0.3 }} transition={{ delay: 0.4, duration: 0.6 }}>
-        <rect x={200} y={130} width={340} height={60} fill="rgba(240,198,116,0.04)" stroke="var(--color-line-strong)" strokeWidth="0.5" strokeDasharray="1 3" />
+        <rect x={200} y={130} width={340} height={60} fill="color-mix(in srgb, var(--color-amber) 4%, transparent)" stroke="var(--color-line-strong)" strokeWidth="0.5" strokeDasharray="1 3" />
         <text x={370} y={120} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9" fill="var(--color-amber)" letterSpacing="2">CISLUNAR · L1 · L2</text>
         <circle cx={300} cy={160} r={2} fill="var(--color-amber)" />
         <text x={300} y={150} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="7" fill="var(--color-amber)">L1</text>

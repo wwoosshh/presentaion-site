@@ -6,7 +6,7 @@ export function ConclusionStars() {
       <motion.div
         aria-hidden
         className="absolute inset-0 -z-10 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(232,93,60,0.08), transparent 60%)' }}
+        style={{ background: 'radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 60%)' }}
       />
 
       <svg aria-hidden viewBox="-300 -160 600 320" className="absolute inset-0 w-full h-full pointer-events-none">

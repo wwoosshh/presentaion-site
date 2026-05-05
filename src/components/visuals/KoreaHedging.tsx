@@ -12,7 +12,7 @@ export function KoreaHedging() {
         <text x={650} y={130} textAnchor="middle" fontFamily="Gowun Batang" fontSize="14" fontWeight="700" fill="var(--color-text)">CHINA</text>
       </motion.g>
       <motion.g initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.3 }} transition={{ delay: 0.5, duration: 0.5 }}>
-        <rect x={310} y={90} width={140} height={70} fill="rgba(232,93,60,0.08)" stroke="var(--color-accent)" strokeWidth="1.4" rx="2"/>
+        <rect x={310} y={90} width={140} height={70} fill="color-mix(in srgb, var(--color-accent) 8%, transparent)" stroke="var(--color-accent)" strokeWidth="1.4" rx="2"/>
         <text x={380} y={120} textAnchor="middle" fontFamily="Gowun Batang" fontSize="16" fontWeight="700" fill="var(--color-accent)">한국</text>
         <text x={380} y={140} textAnchor="middle" fontFamily="Pretendard" fontSize="10" fill="var(--color-amber)">헤징 · HEDGING</text>
       </motion.g>
