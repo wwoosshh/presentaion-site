@@ -28,7 +28,7 @@ const SYMBOLS: Record<string, ReactNode> = {
   iv: (
     <g stroke="currentColor" fill="none" strokeWidth="1.2">
       <circle cx="30" cy="25" r="18" />
-      <path d="M 18 18 L 24 28 L 28 20 L 36 32 L 42 22" stroke="#e85d3c" strokeWidth="1.4" />
+      <path d="M 18 18 L 24 28 L 28 20 L 36 32 L 42 22" stroke="var(--color-accent)" strokeWidth="1.4" />
     </g>
   ),
 }
@@ -40,7 +40,7 @@ export function RealismGrid({ cards }: { cards: readonly CardData[] }) {
         <motion.div
           key={card.num}
           className="relative bg-bg-2 border border-line p-6 group"
-          whileHover={{ borderColor: 'rgba(232,93,60,0.4)' }}
+          whileHover={{ borderColor: 'color-mix(in srgb, var(--color-accent) 40%, transparent)' }}
           transition={{ duration: 0.2 }}
         >
           <div className="flex items-start justify-between gap-4 mb-4">

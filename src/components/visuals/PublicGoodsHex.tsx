@@ -42,14 +42,14 @@ export function PublicGoodsHex({ principles, className }: Props) {
           >
             <path
               d={hexPath(p.x, p.y, R * 0.85)}
-              fill={isCenter ? 'rgba(232,93,60,0.08)' : 'rgba(19,19,28,0.6)'}
-              stroke={isCenter ? '#e85d3c' : '#3a3a48'}
+              fill={isCenter ? 'color-mix(in srgb, var(--color-accent) 8%, transparent)' : 'color-mix(in srgb, var(--color-bg-2) 60%, transparent)'}
+              stroke={isCenter ? 'var(--color-accent)' : 'var(--color-line-strong)'}
               strokeWidth="1"
             />
-            <text x={p.x} y={p.y - 4} textAnchor="middle" fontFamily="Gowun Batang" fontSize="13" fontWeight="700" fill={isCenter ? '#e85d3c' : '#efe9d9'}>
+            <text x={p.x} y={p.y - 4} textAnchor="middle" fontFamily="Gowun Batang" fontSize="13" fontWeight="700" fill={isCenter ? 'var(--color-accent)' : 'var(--color-text)'}>
               {pr?.title ?? '아르테미스'}
             </text>
-            <text x={p.x} y={p.y + 14} textAnchor="middle" fontFamily="Pretendard" fontSize="9" fill="#9d978a">
+            <text x={p.x} y={p.y + 14} textAnchor="middle" fontFamily="Pretendard" fontSize="9" fill="var(--color-text-dim)">
               {pr?.body.slice(0, 14) ?? '7대 원칙 중심'}
             </text>
           </motion.g>

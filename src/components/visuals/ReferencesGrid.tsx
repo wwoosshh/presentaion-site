@@ -12,7 +12,7 @@ export function ReferencesGrid({ items, heading }: Props) {
           <motion.li
             key={i}
             className="relative pl-7 py-2 text-text-dim border-b border-line text-sm"
-            whileHover={{ x: 4, color: '#efe9d9' }}
+            whileHover={{ x: 4, color: 'var(--color-text)' }}
             transition={hoverSpring}
           >
             <span className="absolute left-0 top-4 w-2 h-px bg-accent" />

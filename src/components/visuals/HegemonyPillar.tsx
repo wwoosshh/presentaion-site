@@ -17,7 +17,7 @@ export function HegemonyPillar() {
               cx={40 + i * 20}
               cy={70}
               r={3}
-              fill="#efe9d9"
+              fill="var(--color-text)"
               variants={{ hidden: { opacity: 0, y: -5 }, visible: { opacity: 1, y: 0 } }}
               className="group-hover:opacity-30 transition-opacity duration-700"
             />
@@ -25,7 +25,7 @@ export function HegemonyPillar() {
         </motion.g>
         <motion.line
           x1={30} y1={80} x2={270} y2={80}
-          stroke="#3a3a48" strokeWidth="1"
+          stroke="var(--color-line-strong)" strokeWidth="1"
           initial={{ pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
           viewport={{ once: false, amount: 0.4 }}
@@ -34,7 +34,7 @@ export function HegemonyPillar() {
 
         <motion.rect
           x={140} y={80} width={20} height={220}
-          fill="#e85d3c"
+          fill="var(--color-accent)"
           initial={{ scaleY: 0 }}
           whileInView={{ scaleY: 1 }}
           viewport={{ once: false, amount: 0.4 }}
@@ -45,15 +45,15 @@ export function HegemonyPillar() {
 
         <motion.line
           x1={60} y1={310} x2={240} y2={310}
-          stroke="#3a3a48" strokeWidth="1.5"
+          stroke="var(--color-line-strong)" strokeWidth="1.5"
           initial={{ pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
           viewport={{ once: false, amount: 0.4 }}
           transition={{ duration: 0.6 }}
         />
 
-        <text x={150} y={50} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="10" letterSpacing="3" fill="#9d978a">PUBLIC GOODS</text>
-        <text x={150} y={335} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="10" letterSpacing="3" fill="#9d978a">HEGEMON</text>
+        <text x={150} y={50} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="10" letterSpacing="3" fill="var(--color-text-dim)">PUBLIC GOODS</text>
+        <text x={150} y={335} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="10" letterSpacing="3" fill="var(--color-text-dim)">HEGEMON</text>
       </svg>
       <p className="text-xs text-text-faint italic mt-2 max-w-[300px] text-center">기둥에 마우스 호버 &rarr; 패권 부재 시 시뮬레이션</p>
     </div>

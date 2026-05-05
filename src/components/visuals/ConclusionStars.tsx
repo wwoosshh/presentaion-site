@@ -19,7 +19,7 @@ export function ConclusionStars() {
             <motion.circle
               key={i}
               r={1.2}
-              fill="#efe9d9"
+              fill="var(--color-text)"
               initial={{ cx: x, cy: y, opacity: 0.6 }}
               whileInView={{ cx: 0, cy: 0, opacity: 0 }}
               viewport={{ once: false, amount: 0.4 }}

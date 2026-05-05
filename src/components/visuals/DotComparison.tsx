@@ -5,8 +5,8 @@ export function DotComparison() {
   const ch = Array.from({ length: 17 })
   return (
     <svg aria-hidden viewBox="0 0 880 240" className="w-full max-w-[880px]">
-      <text x={120} y={26} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="11" letterSpacing="3" fill="#e85d3c">ARTEMIS · 66</text>
-      <text x={760} y={26} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="11" letterSpacing="3" fill="#9d978a">ILRS · 17</text>
+      <text x={120} y={26} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="11" letterSpacing="3" fill="var(--color-accent)">ARTEMIS · 66</text>
+      <text x={760} y={26} textAnchor="middle" fontFamily="JetBrains Mono" fontSize="11" letterSpacing="3" fill="var(--color-text-dim)">ILRS · 17</text>
 
       {us.map((_, i) => {
         const col = i % 11
@@ -17,7 +17,7 @@ export function DotComparison() {
             cx={50 + col * 16}
             cy={60 + row * 22}
             r={4}
-            fill="#e85d3c"
+            fill="var(--color-accent)"
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: false, amount: 0.3 }}
@@ -35,7 +35,7 @@ export function DotComparison() {
             cx={700 + col * 16}
             cy={60 + row * 22}
             r={4}
-            fill="#5e5a52"
+            fill="var(--color-text-faint)"
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: false, amount: 0.3 }}
