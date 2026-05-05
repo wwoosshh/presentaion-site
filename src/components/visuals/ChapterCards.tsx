@@ -7,7 +7,7 @@ interface CardData { num?: string; title: string; body: string }
 export function ChapterCards({ cards }: { cards: readonly CardData[] }) {
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 max-w-[980px]"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 max-w-[980px]"
       style={{ perspective: '1000px' }}
     >
       {cards.map((card, i) => (

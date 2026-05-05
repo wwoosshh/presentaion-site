@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 
 interface Principle { title: string; body: string }
 
+interface Props { principles: readonly Principle[]; className?: string }
+
 function hexPath(cx: number, cy: number, r: number) {
   const points: string[] = []
   for (let i = 0; i < 6; i++) {
@@ -11,7 +13,7 @@ function hexPath(cx: number, cy: number, r: number) {
   return `M ${points.join(' L ')} Z`
 }
 
-export function PublicGoodsHex({ principles }: { principles: readonly Principle[] }) {
+export function PublicGoodsHex({ principles, className }: Props) {
   const cx = 320, cy = 200, R = 70
   const positions = [
     { x: cx, y: cy },
@@ -24,7 +26,7 @@ export function PublicGoodsHex({ principles }: { principles: readonly Principle[
   ]
 
   return (
-    <svg aria-hidden viewBox="0 0 640 400" className="w-full max-w-[640px] my-8">
+    <svg aria-hidden viewBox="0 0 640 400" className={`w-full max-w-[640px] my-8 ${className ?? ''}`}>
       {positions.slice(0, 7).map((p, i) => {
         const isCenter = i === 0
         const pr = principles[i]

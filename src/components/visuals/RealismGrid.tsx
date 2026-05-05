@@ -35,7 +35,7 @@ const SYMBOLS: Record<string, ReactNode> = {
 
 export function RealismGrid({ cards }: { cards: readonly CardData[] }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4">
       {cards.map((card) => (
         <motion.div
           key={card.num}

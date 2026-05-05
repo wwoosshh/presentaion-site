@@ -16,10 +16,10 @@ function arcPath(cx: number, cy: number, r: number, startAngle: number, endAngle
 }
 
 export function TwoCampsArc() {
-  const cx = 440, cy = 400, r = 320
+  const cx = 440, cy = 320, r = 240
 
   return (
-    <svg aria-hidden viewBox="0 0 880 460" className="w-full max-w-[880px] my-6">
+    <svg aria-hidden viewBox="0 0 880 360" className="w-full max-w-[560px] my-2">
       <defs>
         <radialGradient id="convergeGlow" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="#f0c674" stopOpacity="0.15" />

@@ -28,9 +28,9 @@ export function PresentationShell({ children }: Props) {
               ref={setRef(i)}
               className={cn(
                 'snap-start snap-always relative overflow-hidden',
-                'min-h-screen w-full',
+                'h-screen w-full',
                 'flex flex-col justify-center',
-                'px-[8vw] py-[5vh]',
+                'px-[8vw] pt-[10vh] pb-[10vh]',
                 'border-b border-line'
               )}
             >

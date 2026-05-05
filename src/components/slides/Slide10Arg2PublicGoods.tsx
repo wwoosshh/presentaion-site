@@ -10,11 +10,11 @@ export function Slide10Arg2PublicGoods() {
   return (
     <RevealOnView className="relative z-10 w-full max-w-[1100px]">
       <Kicker>{c.kicker}</Kicker>
-      <h2 className="font-serif text-[clamp(1.8rem,4vw,3.5rem)] font-bold mb-6">{c.title}</h2>
-      <BigStat value={c.bigStat.value} label={c.bigStat.label} />
-      <p className="text-[clamp(1.1rem,1.6vw,1.4rem)] text-text-dim leading-relaxed max-w-[60ch]">{c.lead}</p>
-      <PublicGoodsHex principles={c.principles} />
-      <p className="text-[1.05rem] text-text-dim max-w-[80ch] mt-4">{c.closing}</p>
+      <h2 className="font-serif text-[clamp(1.5rem,3vw,2.4rem)] font-bold mb-3">{c.title}</h2>
+      <BigStat value={c.bigStat.value} label={c.bigStat.label} className="my-2" />
+      <p className="text-[clamp(1rem,1.3vw,1.2rem)] text-text-dim leading-relaxed max-w-[60ch]">{c.lead}</p>
+      <PublicGoodsHex principles={c.principles} className="!my-2" />
+      <p className="text-[0.95rem] text-text-dim max-w-[80ch] mt-2">{c.closing}</p>
     </RevealOnView>
   )
 }

@@ -10,13 +10,13 @@ export function Slide02Treaty() {
   return (
     <RevealOnView className="relative z-10 w-full max-w-[1100px]" staggerChildren={0.12}>
       <Kicker>{c.kicker}</Kicker>
-      <h2 className="font-serif text-[clamp(1.8rem,4vw,3.5rem)] font-bold tracking-tight leading-[1.15]">
+      <h2 className="font-serif text-[clamp(1.5rem,3vw,2.4rem)] font-bold tracking-tight leading-[1.15]">
         {c.titleLine1}<br />{c.titleLine2}
       </h2>
       <TreatyFracture />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-3">
         <div>
-          <p className="text-[1.05rem] text-text-dim max-w-[62ch]"><strong className="text-text font-semibold">{c.intro}</strong></p>
+          <p className="text-[0.95rem] text-text-dim max-w-[62ch]"><strong className="text-text font-semibold">{c.intro}</strong></p>
           <ul className="mt-6">
             {c.bullets.map((b, i) => (
               <li key={i} className="relative pl-7 py-2.5 text-text-dim border-b border-line last:border-0">
@@ -26,7 +26,7 @@ export function Slide02Treaty() {
             ))}
           </ul>
         </div>
-        <Quote cite={c.quote.cite}>{c.quote.body}</Quote>
+        <Quote cite={c.quote.cite} className="my-2">{c.quote.body}</Quote>
       </div>
     </RevealOnView>
   )
