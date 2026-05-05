@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/user/Desktop/files/docs/superpowers/specs/**)",
+      "Read(//c/Users/user/Desktop/files/**)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(npx vitest *)",
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(xargs grep -l \"create<.*>\\(\")",
+      "Bash(cat)",
+      "Bash(node /tmp/test_init.js)",
+      "Bash(node /tmp/check_persist.js)",
+      "Read(//tmp/**)",
+      "Bash(cat tailwind.config.ts)",
+      "Bash(cat tailwind.config.js)",
+      "Bash(grep -v \"^commit\\\\|^Author\\\\|^Date\\\\|^$\\\\|refactor\")",
+      "Bash(git *)",
+      "Bash(Get-ChildItem -Path \"src/components\" -Recurse -Filter \"*.tsx\")",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(npx vite *)",
+      "Bash(node -e ' *)",
+      "Bash(grep -rn \"#[0-9a-fA-F]\\\\{3,8\\\\}\" src/components/)"
+    ]
+  }
+}
