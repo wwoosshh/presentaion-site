@@ -4,6 +4,7 @@ import { useKeyboardNav } from '@/hooks/useKeyboardNav'
 import { useMouseIdle } from '@/hooks/useMouseIdle'
 import { cn } from '@/lib/cn'
 import { PresenterHUD } from '@/components/presenter/PresenterHUD'
+import { ThemeToggle } from '@/components/shell/ThemeToggle'
 import { Slide00Cover } from '@/components/slides/Slide00Cover'
 import { Slide01Contents } from '@/components/slides/Slide01Contents'
 import { Slide02Treaty } from '@/components/slides/Slide02Treaty'
@@ -53,6 +54,7 @@ export default function App() {
         <Slide18References />
       </PresentationShell>
       <PresenterHUD />
+      <ThemeToggle />
       <div className={cn(
         'hidden md:block fixed bottom-4 left-4 z-30 font-mono text-[0.65rem] text-text-faint pointer-events-none transition-opacity',
         idle ? 'opacity-0' : 'opacity-100'
