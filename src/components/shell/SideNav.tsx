@@ -1,9 +1,14 @@
 import { usePresenterMode } from '@/hooks/usePresenterMode'
 import { useMouseIdle } from '@/hooks/useMouseIdle'
-import { SLIDES } from '@/data/slides'
+import { SLIDES as DEFAULT_SLIDES, type SlideMetaBase } from '@/data/slides'
 import { cn } from '@/lib/cn'
 
-export function SideNav() {
+interface Props {
+  slides?: readonly SlideMetaBase[]
+}
+
+export function SideNav({ slides }: Props = {}) {
+  const SLIDES = slides ?? DEFAULT_SLIDES
   const activeIdx = usePresenterMode((s) => s.activeIndex)
   const idle = useMouseIdle()
   return (

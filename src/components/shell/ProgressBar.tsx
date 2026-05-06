@@ -1,10 +1,15 @@
 import { usePresenterMode } from '@/hooks/usePresenterMode'
 import { useMouseIdle } from '@/hooks/useMouseIdle'
-import { SLIDES } from '@/data/slides'
+import { SLIDES as DEFAULT_SLIDES, type SlideMetaBase } from '@/data/slides'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/cn'
 
-export function ProgressBar() {
+interface Props {
+  slides?: readonly SlideMetaBase[]
+}
+
+export function ProgressBar({ slides }: Props = {}) {
+  const SLIDES = slides ?? DEFAULT_SLIDES
   const idx = usePresenterMode((s) => s.activeIndex)
   const idle = useMouseIdle()
   const pct = ((idx + 1) / SLIDES.length) * 100

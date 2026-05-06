@@ -1,5 +1,5 @@
 import { useSlideObserver } from '@/hooks/useSlideObserver'
-import { SLIDES, TOTAL_DISPLAY_PANELS } from '@/data/slides'
+import { SLIDES as DEFAULT_SLIDES, TOTAL_DISPLAY_PANELS as DEFAULT_TOTAL, type SlideMetaBase } from '@/data/slides'
 import { cn } from '@/lib/cn'
 import type { ReactNode } from 'react'
 import { SectionMarker } from './SectionMarker'
@@ -9,15 +9,19 @@ import { SideNav } from './SideNav'
 
 interface Props {
   children: ReactNode[]
+  slides?: readonly SlideMetaBase[]
+  totalDisplay?: number
 }
 
-export function PresentationShell({ children }: Props) {
+export function PresentationShell({ children, slides, totalDisplay }: Props) {
+  const SLIDES = slides ?? DEFAULT_SLIDES
+  const TOTAL = totalDisplay ?? DEFAULT_TOTAL
   const { setRef } = useSlideObserver(SLIDES.length)
 
   return (
     <>
-      <ProgressBar />
-      <SideNav />
+      <ProgressBar slides={SLIDES} />
+      <SideNav slides={SLIDES} />
       <div className={cn('snap-y snap-mandatory h-screen overflow-y-scroll overflow-x-hidden relative bg-bg text-text')}>
         {children.map((child, i) => {
           const meta = SLIDES[i]
@@ -40,7 +44,7 @@ export function PresentationShell({ children }: Props) {
               <SectionFooter
                 left={meta.footerLeft}
                 rightNumber={meta.displayNumber}
-                totalDisplay={TOTAL_DISPLAY_PANELS}
+                totalDisplay={TOTAL}
               />
             </section>
           )
