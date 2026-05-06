@@ -4,14 +4,18 @@ export type SlideId =
   | 'arg2PublicGoods' | 'arg3Mirror' | 'arg4Legitimacy' | 'nna1ChokePoints'
   | 'nna2LegalHistory' | 'rebuttals' | 'koreaPath' | 'conclusion' | 'references'
 
-export interface SlideMeta {
-  id: SlideId
+export interface SlideMetaBase {
+  id: string
   displayNumber: number | null
   marker: string
   title: string
   footerLeft: string
   timeSeconds: number | null
   chapter: number
+}
+
+export interface SlideMeta extends SlideMetaBase {
+  id: SlideId
 }
 
 export const SLIDES: readonly SlideMeta[] = [

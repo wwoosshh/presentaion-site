@@ -1,14 +1,15 @@
 import { useEffect } from 'react'
 import { usePresenterMode } from './usePresenterMode'
 import { useFullscreen } from './useFullscreen'
-import { SLIDES } from '@/data/slides'
+import { SLIDES as DEFAULT_SLIDES, type SlideMetaBase } from '@/data/slides'
 
 function scrollToSlide(idx: number) {
   const el = document.getElementById(`s${idx}`)
   el?.scrollIntoView({ behavior: 'smooth' })
 }
 
-export function useKeyboardNav() {
+export function useKeyboardNav(slides?: readonly SlideMetaBase[]) {
+  const SLIDES = slides ?? DEFAULT_SLIDES
   const fs = useFullscreen()
 
   useEffect(() => {
