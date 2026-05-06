@@ -29,16 +29,18 @@ export function Slide06Phase2() {
             </span>
             <h4 className="font-serif text-[1.2rem] font-bold text-text mb-3">{g.title}</h4>
             <span className="block w-10 h-px bg-accent mb-4" />
-            <div className="flex flex-wrap gap-2 mb-5 flex-1">
-              {g.members.map((m, mi) => (
-                <span
-                  key={mi}
-                  className="inline-block px-3 py-1 border border-line-strong rounded-full text-[0.75rem] text-text-dim font-mono"
-                  style={{ letterSpacing: '0.05em' }}
-                >
-                  {m}
-                </span>
-              ))}
+            <div className="flex-1 mb-5">
+              <div className="flex flex-wrap gap-2">
+                {g.members.map((m, mi) => (
+                  <span
+                    key={mi}
+                    className="inline-flex items-center h-7 px-3 border border-line-strong rounded-full text-[0.75rem] leading-none text-text-dim font-mono"
+                    style={{ letterSpacing: '0.05em' }}
+                  >
+                    {m}
+                  </span>
+                ))}
+              </div>
             </div>
             <p className="text-[0.88rem] text-accent font-serif italic">→  {g.role}</p>
           </motion.div>
