@@ -14,7 +14,7 @@ export function CoreClaimCinema({ lines }: Props) {
       />
 
       <motion.div
-        className="text-center max-w-[28ch] mx-auto"
+        className="text-center mx-auto"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.5 }}
@@ -26,7 +26,7 @@ export function CoreClaimCinema({ lines }: Props) {
         {lines.map((line, i) => (
           <motion.div
             key={i}
-            className="font-serif text-[clamp(1.6rem,3.5vw,2.6rem)] leading-[1.4]"
+            className="font-serif text-[clamp(1.2rem,min(3.4vw,4.5vh),2.6rem)] leading-[1.35] whitespace-nowrap"
             variants={{
               hidden: { opacity: 0, y: 20, filter: 'blur(8px)' },
               visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } },

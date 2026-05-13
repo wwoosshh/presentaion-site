@@ -11,7 +11,7 @@ export function Slide08CoreClaim() {
       <Kicker className="block text-center">{c.kicker}</Kicker>
       <CoreClaimCinema lines={c.lines} />
       <motion.p
-        className="text-[clamp(1.1rem,1.6vw,1.4rem)] text-text-dim mt-12"
+        className="text-[clamp(1rem,1.6vw,1.4rem)] text-text-dim mt-[clamp(1.5rem,4vh,3rem)]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: false }}
